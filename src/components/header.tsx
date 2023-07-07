@@ -37,8 +37,15 @@ const Header = () => {
                 <Image height={35} width={35} alt={data.user.name!} src={data.user.image!} className="rounded-full shadow-md"/>
                 
                 {menuIsOpen && (
-                    <div className="z-50 absolute top-14 left-0 w-full h-full bg-white rounded-lg shadow-md flex flex-col justify-center items-center">
-                    <button className="text-primary text-sm font-semibold" onClick={handleLogoutClick}>
+                    <div className="z-50 absolute top-14 left-0 w-full h-[100px] bg-white rounded-lg shadow-md flex flex-col justify-center items-center">
+                    
+                    <Link href="/my-trips">
+                    <button className="text-primary text-sm pb-2 border-b border-grayLighter border-solid font-semibold">
+                      Minhas Viagens
+                    </button>
+                    </Link>
+
+                    <button className="text-primary text-sm pt-2 font-semibold" onClick={handleLogoutClick}>
                       Logout
                     </button>
                     </div>
